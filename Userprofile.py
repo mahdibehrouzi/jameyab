@@ -1,12 +1,8 @@
-import os.path
-
+import os
 import tornado.httpserver
 import tornado.ioloop
 import tornado.options
 import tornado.web
-
-from tornado.options import define, options
-define("port", default=80, help="run on the given port", type=int)
 
 
 class IndexHandler(tornado.web.RequestHandler):
@@ -23,14 +19,14 @@ class PageHandler(tornado.web.RequestHandler):
         self.render('profile.html', you=noun1, userName=noun2, weight=noun3, age=verb)
 
 if __name__ == '__main__':
-    tornado.options.parse_command_line()
     app = tornado.web.Application(
         handlers=[
             (r'/', IndexHandler),
             (r'/profile', PageHandler)
         ],
         template_path="template")
+    http_server = tornado.httpserver.HTTPServer(app)
+    port = int(os.environ.get("PORT", 5000))
+    http_server.listen(port)
+    tornado.ioloop.IOLoop.instance().start()
 
-http_server = tornado.httpserver.HTTPServer(app)
-http_server.listen(options.port)
-tornado.ioloop.IOLoop.instance().start()
