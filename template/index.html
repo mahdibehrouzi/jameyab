@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>get info</title>
+    <script type="text/javascript">
+	function formCleaner1()
+	{
+		if( document.getElementById("noun1").value!=null)
+		{
+			document.getElementById("noun1").value="";
+		}
+
+
+
+    }
+    function defaultForm1()
+    {
+     if   ( document.getElementById("noun1").value=="")
+		{
+			document.getElementById("noun1").value="fill it";
+	    }
+    }
+    	function formCleaner2()
+	{
+		if( document.getElementById("noun2").value!=null)
+		{
+			document.getElementById("noun2").value="";
+		}
+
+
+
+    }
+    function defaultForm2()
+    {
+     if   ( document.getElementById("noun2").value=="")
+		{
+			document.getElementById("noun2").value="fill it";
+	    }
+    }
+        	function formCleaner3()
+	{
+		if( document.getElementById("verb").value!=null)
+		{
+			document.getElementById("verb").value="";
+		}
+
+
+
+    }
+    function defaultForm3()
+    {
+     if   ( document.getElementById("verb").value=="")
+		{
+			document.getElementById("verb").value="fill it";
+	    }
+    }
+        	function formCleaner4()
+	{
+		if( document.getElementById("noun4").value!=null)
+		{
+			document.getElementById("noun4").value="";
+		}
+
+
+
+    }
+    function defaultForm4()
+    {
+     if   ( document.getElementById("noun4").value=="")
+		{
+			document.getElementById("noun4").value="fill it";
+	    }
+    }
+</script>
+</head>
+<body>
+    <h1>Enter information...</h1>
+<form method="post" action="/profile">
+    <p>name<br><input type="text" value="fill it" style="color:gray;" id="noun1" name="noun1" onfocus="formCleaner1();" onblur="defaultForm1();"></p>
+
+    <p>Usrrname<br><input type="text" value="fill it" style="color: gray;" name="noun2" id="noun2" onfocus="formCleaner2();" onblur="defaultForm2();"></p>
+
+    <p>age<br><input type="text" value="fill it" style="color: gray;" name="verb" id="verb" onfocus="formCleaner3();" onblur="defaultForm3();"></p>
+
+    <p>weight<br><input type="text" value="fill it" style="color: gray;" name="noun3" id="noun4" onfocus="formCleaner4();" onblur="defaultForm4();"></p>
+    <input type="submit">
+
+</form>
+</body>
+</html>
