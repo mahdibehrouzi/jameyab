@@ -4,87 +4,37 @@
     <meta charset="UTF-8">
     <title>get info</title>
     <script type="text/javascript">
-	function formCleaner1()
+	function formCleaner(noun)
 	{
-		if( document.getElementById("noun1").value!=null)
+		if (noun.value!=null)
 		{
-			document.getElementById("noun1").value="";
+			noun.value="";
 		}
-
-
-
-    }
-    function defaultForm1()
+	}
+    function defaultForm(noun)
     {
-     if   ( document.getElementById("noun1").value=="")
+     	if( noun.value=="")
 		{
-			document.getElementById("noun1").value="fill it";
+			noun.value="fill it";
 	    }
     }
-    	function formCleaner2()
-	{
-		if( document.getElementById("noun2").value!=null)
-		{
-			document.getElementById("noun2").value="";
-		}
 
-
-
-    }
-    function defaultForm2()
-    {
-     if   ( document.getElementById("noun2").value=="")
-		{
-			document.getElementById("noun2").value="fill it";
-	    }
-    }
-        	function formCleaner3()
-	{
-		if( document.getElementById("verb").value!=null)
-		{
-			document.getElementById("verb").value="";
-		}
-
-
-
-    }
-    function defaultForm3()
-    {
-     if   ( document.getElementById("verb").value=="")
-		{
-			document.getElementById("verb").value="fill it";
-	    }
-    }
-        	function formCleaner4()
-	{
-		if( document.getElementById("noun4").value!=null)
-		{
-			document.getElementById("noun4").value="";
-		}
-
-
-
-    }
-    function defaultForm4()
-    {
-     if   ( document.getElementById("noun4").value=="")
-		{
-			document.getElementById("noun4").value="fill it";
-	    }
-    }
 </script>
 </head>
 <body>
-    <h1>Enter information...</h1>
+    <h1>Enter information..........</h1>
 <form method="post" action="/profile">
-    <p>name<br><input type="text" value="fill it" style="color:gray;" id="noun1" name="noun1" onfocus="formCleaner1();" onblur="defaultForm1();"></p>
+    <p>اسمت چیه؟<br><input type="text" value="fill it" style="color:gray;" id="noun1" name="نام" onfocus="formCleaner(نام);" onblur="defaultForm1(نام);"></p>
 
-    <p>Usrrname<br><input type="text" value="fill it" style="color: gray;" name="noun2" id="noun2" onfocus="formCleaner2();" onblur="defaultForm2();"></p>
+    <p>نام کاربریت؟<br><input type="text" value="fill it" style="color: gray;" name="username" id="noun2" onfocus="formCleaner(username);" onblur="defaultForm(username);"></p>
 
-    <p>age<br><input type="text" value="fill it" style="color: gray;" name="verb" id="verb" onfocus="formCleaner3();" onblur="defaultForm3();"></p>
+    <p>چند سالته؟<br><input type="text" value="fill it" style="color: gray;" name="age" id="noun3" onfocus="formCleaner(age);" onblur="defaultForm(age);"></p>
 
-    <p>weight<br><input type="text" value="fill it" style="color: gray;" name="noun3" id="noun4" onfocus="formCleaner4();" onblur="defaultForm4();"></p>
+    <p>چندکیلویی؟<br><input type="text" value="fill it" style="color: gray;" name="weight" id="noun4" onfocus="formCleaner(weight);" onblur="defaultForm(weight);"></p>
+  
+	    <p>جنسیت<br><input type="text" value="fill it" style="color: gray;" name="جنسیت" id="noun5" onfocus="formCleaner(جنسیت);" onblur="defaultForm(جنسیت);"></p>
     <input type="submit">
+
 
 </form>
 </body>
